@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <h1 class="app-title">Weather App</h1>
+
+        <div class="search-bar">
+            <input type="text" id="city-input" placeholder="Enter a city..." autocomplete="off" />
+            <button id="search-btn">Search</button>
+        </div>
+
+        <div id="error-msg" class="error hidden"></div>
+
+        <div id="weather-card" class="weather-card hidden">
+            <div class="location">
+                <span id="city-name"></span>
+                <span id="country-name"></span>
+            </div>
+            <div class="weather-main">
+                <span id="weather-icon" class="weather-icon"></span>
+                <div class="temp-block">
+                    <span id="temperature" class="temperature"></span>
+                    <button id="unit-toggle" class="unit-toggle">°F</button>
+                </div>
+            </div>
+            <p id="weather-desc" class="weather-desc"></p>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-icon">🌡️</span>
+                    <span class="stat-label">Feels Like</span>
+                    <span id="feels-like" class="stat-value"></span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">💧</span>
+                    <span class="stat-label">Humidity</span>
+                    <span id="humidity" class="stat-value"></span>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">💨</span>
+                    <span class="stat-label">Wind</span>
+                    <span id="wind-speed" class="stat-value"></span>
+                </div>
+            </div>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
